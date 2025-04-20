@@ -9,5 +9,5 @@ public interface IAcervoRepository {
     List<Livro> getLivrosDoAutor(String autor);
     Livro getLivroTitulo(String titulo);
     boolean cadastraLivroNovo(Livro livro);
-    boolean removeLivro(long codigo);
+    boolean removeLivro(int codigo);
 }

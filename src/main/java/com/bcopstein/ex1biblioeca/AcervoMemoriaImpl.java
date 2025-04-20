@@ -63,7 +63,7 @@ public class AcervoMemoriaImpl implements IAcervoRepository {
     }
 
     @Override
-    public boolean removeLivro(long codigo) {
+    public boolean removeLivro(int codigo) {
         List<Livro> tmp = livros.stream()
                 .filter(livro -> livro.getId() == codigo)
                 .toList();
