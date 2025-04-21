@@ -7,8 +7,9 @@ public class Livro {
     private int ano;
 
     public Livro(){
-        
+
     }
+    
     public Livro(long id, String titulo, String autor, int ano) {
         this.id = id;
         this.titulo = titulo;

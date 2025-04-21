@@ -60,4 +60,10 @@ public class Controller {
     public boolean cadastraLivroNovo(@RequestBody final Livro livro) {
         return livros.cadastraLivroNovo(livro);
     }
+
+    @PostMapping("/removelivro")
+    @CrossOrigin(origins = "*")
+    public boolean removeLivro(@RequestBody int codigo){
+        return livros.removeLivro(codigo);
+    }
 }

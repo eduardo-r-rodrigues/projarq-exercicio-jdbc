@@ -48,7 +48,7 @@ public class AcervoJDBCImpls implements IAcervoRepository {
 
     @Override
     public boolean cadastraLivroNovo(Livro livro) {
-        String sql = "INSERT INTO Livros (titulo,autor,ano) VALUES (?,?,?)";
+        String sql = "INSERT INTO livros (codigo, titulo, autor, ano) VALUES (DEFAULT, ?, ?, ?)";
         jdbcTemplate.update(sql, livro.getTitulo(), livro.getAutor(), livro.getAno());
         return true;
     }
