@@ -15,7 +15,7 @@ public class AcervoJDBCImpls implements IAcervoRepository {
     @Override
     public List<Livro> getAll() {
         List<Livro> livros = jdbcTemplate.query("SELECT * FROM livros",
-                (rs, rowNum) -> new Livro(rs.getInt("id"),rs.getString("titulo"),rs.getString("autor"),rs.getInt("ano")));
+                (rs, rowNum) -> new Livro(rs.getInt("codigo"),rs.getString("titulo"),rs.getString("autor"),rs.getInt("ano")));
         return livros;
     }
 
