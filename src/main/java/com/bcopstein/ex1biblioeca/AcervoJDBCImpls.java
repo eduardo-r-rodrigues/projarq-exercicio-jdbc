@@ -55,7 +55,7 @@ public class AcervoJDBCImpls implements IAcervoRepository {
 
     @Override
     public boolean removeLivro(int codigo) {
-        String sql = "DELETE FROM Livros WHERE id=?";
+        String sql = "DELETE FROM Livros WHERE codigo=?";
         jdbcTemplate.update(sql, codigo);
         return true;
     }
